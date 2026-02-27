@@ -9,6 +9,12 @@
   --border: rgba(255,255,255,0.08);
 }
 
+.gradient-text {
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 [data-theme="dark"] {
   --bg: #0f172a;
   --text: #f8fafc;
@@ -119,14 +125,17 @@ h1, h2, h3 {
 
 .project-card {
   background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
   padding: 2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s;
+  border-radius: 16px;
+  transition: all 0.35s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .modal {
@@ -182,3 +191,4 @@ footer {
   }
 
 }
+
