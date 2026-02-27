@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | JavaScript Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">YN</div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#timeline">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" aria-label="Toggle dark mode">
+            🌙
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero container">
+    <h1>Your Name</h1>
+    <h2>JavaScript Developer</h2>
+    <p>Building clean, interactive and scalable web experiences.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section container">
+    <h2>About Me</h2>
+    <p>
+      Passionate JavaScript developer focused on building performant,
+      user-friendly web applications using modern web technologies.
+    </p>
+
+    <div class="skills">
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="bar"><div class="progress" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <span>HTML</span>
+        <div class="bar"><div class="progress" data-width="85%"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="bar"><div class="progress" data-width="80%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Git</span>
+        <div class="bar"><div class="progress" data-width="75%"></div></div>
+      </div>
+      <div class="skill">
+        <span>APIs</span>
+        <div class="bar"><div class="progress" data-width="85%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Node.js Basics</span>
+        <div class="bar"><div class="progress" data-width="70%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="section container">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+      <div class="project-card" data-project="task">
+        <h3>Task Manager App</h3>
+        <p>Productivity app using localStorage.</p>
+      </div>
+
+      <div class="project-card" data-project="weather">
+        <h3>Weather App</h3>
+        <p>Real-time weather using API fetch.</p>
+      </div>
+
+      <div class="project-card" data-project="dashboard">
+        <h3>Data Dashboard</h3>
+        <p>Interactive dashboard built with pure JS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="project-modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+      <p><strong>Tech:</strong> <span id="modal-tech"></span></p>
+      <div class="modal-links">
+        <a href="#" class="btn primary">Live Demo</a>
+        <a href="#" class="btn secondary">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TIMELINE ================= -->
+  <section id="timeline" class="section container">
+    <h2>Experience & Learning</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>2023</h4>
+        <p>Started Web Development Journey</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2024</h4>
+        <p>Built Full JavaScript Projects</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2025</h4>
+        <p>Advanced into APIs & Node.js</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section container">
+    <h2>Contact Me</h2>
+    <form id="contact-form" novalidate>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn primary">Send Message</button>
+      <p id="form-error"></p>
+    </form>
+
+    <div class="social-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
