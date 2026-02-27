@@ -15,6 +15,17 @@
   -webkit-text-fill-color: transparent;
 }
 
+.bg-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99,102,241,0.25), transparent 70%);
+  top: -200px;
+  right: -200px;
+  z-index: -1;
+  filter: blur(100px);
+}
+
 [data-theme="dark"] {
   --bg: #0f172a;
   --text: #f8fafc;
@@ -191,4 +202,5 @@ footer {
   }
 
 }
+
 
