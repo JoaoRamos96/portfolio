@@ -110,3 +110,7 @@ document.getElementById("contact-form").addEventListener("submit", e => {
   }
 
 });
+
+document.documentElement.style.transition =
+  "background-color 400ms ease, color 400ms ease";
+
