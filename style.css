@@ -43,6 +43,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
 body {
   font-family: system-ui, sans-serif;
   background: var(--bg);
@@ -207,6 +213,7 @@ footer {
   }
 
 }
+
 
 
 
