@@ -69,6 +69,30 @@ document.querySelectorAll(".project-card").forEach(card => {
   });
 });
 
+// ===== Smooth Reveal (Premium Version) =====
+
+const revealElements = document.querySelectorAll(
+  ".section, .project-card, .timeline-item"
+);
+
+const smoothObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal-visible");
+        smoothObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+revealElements.forEach((el, index) => {
+  el.classList.add("reveal");
+  el.style.transitionDelay = `${index * 60}ms`; // subtle stagger
+  smoothObserver.observe(el);
+});
+
 document.querySelector(".close-modal").addEventListener("click", () => {
   modal.style.display = "none";
 });
@@ -84,4 +108,5 @@ document.getElementById("contact-form").addEventListener("submit", e => {
   } else {
     error.textContent = "Message sent successfully!";
   }
+
 });
