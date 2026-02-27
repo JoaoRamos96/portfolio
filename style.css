@@ -54,7 +54,9 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
+  transition:
+    background-color 400ms ease,
+    color 400ms ease;
 }
 
 .container {
@@ -102,12 +104,15 @@ h1, h2, h3 {
 }
 
 .btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.3s;
-  display: inline-block;
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    background 250ms ease,
+    color 250ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 .primary {
@@ -146,18 +151,14 @@ h1, h2, h3 {
 }
 
 .project-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-  padding: 2rem;
-  border-radius: 16px;
-  transition: all 0.35s ease;
+  transition:
+    transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 400ms ease;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--accent);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transform: translateY(-4px);
 }
 
 .modal {
@@ -213,6 +214,14 @@ footer {
   }
 
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
 
 
 
